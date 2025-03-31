@@ -11,16 +11,17 @@ const mealsRoutes = require("./routes/mealsRoutes")
 
 const app = express();
 
+app.use(express.json());
+
 //Middleware to handle CORS
 app.use(
     cors({
         origin: process.env.CLIENT_URL || "*",
-        methods: ["GET", "PUT", "DELETE"],
+        methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
     })
 );
 
-app.use(express.json());
 
 connectDB();
 

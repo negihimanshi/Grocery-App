@@ -12,24 +12,27 @@ import Community from "./pages/Dashboard/Community.jsx";
 import Meals from "./pages/Dashboard/Meals.jsx";
 import Analytics from "./pages/Dashboard/Analytics.jsx";
 import About from "./pages/Dashboard/About.jsx";
+import UserProvider from './context/UserContext.jsx';
 
 
 const App = () => {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Root/>} />
-          <Route path="/login" exact element={<Login/>} />
-          <Route path="/signup" exact element={<SignUp/>} />
-          <Route path="/dashboard" exact element={<Home/>} />
-          <Route path="/meals" exact element={<Meals/>} />
-          <Route path="/community" exact element={<Community/>} />
-          <Route path="/analytics" exact element={<Analytics/>} />
-          <Route path="/about" exact element={<About/>} />
-        </Routes>
-      </Router>
-    </div>
+    <UserProvider>
+      <div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Root/>} />
+            <Route path="/login" exact element={<Login/>} />
+            <Route path="/signup" exact element={<SignUp/>} />
+            <Route path="/dashboard" exact element={<Home/>} />
+            <Route path="/meals" exact element={<Meals/>} />
+            <Route path="/community" exact element={<Community/>} />
+            <Route path="/analytics" exact element={<Analytics/>} />
+            <Route path="/about" exact element={<About/>} />
+          </Routes>
+        </Router>
+      </div>
+    </UserProvider>
   )
 }
 
