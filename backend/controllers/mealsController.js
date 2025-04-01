@@ -8,7 +8,7 @@ exports.searchMeals = async (req, res) => {
         const userId = req.user.id;
 
         // Fetch user's grocery items
-        const groceryItems = await GroceryItem.find({ userId }).sort({ expirationDate: -1 });
+        const groceryItems = await GroceryItem.find({ userId }).sort({ expirationDate: 1 });
         if (!groceryItems.length) {
             return res.status(400).json({ message: "No grocery items found" });
         }

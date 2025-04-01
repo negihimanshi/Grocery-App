@@ -20,7 +20,7 @@ exports.addItem = async (req, res) => {
             category,
             quantity,
             unit,
-            purchaseDate: purchaseDate ? new Date(purchaseDate) : new Date(), // ✅ Fixed
+            purchaseDate: purchaseDate ? new Date(purchaseDate) : new Date(),
             expirationDate: new Date(expirationDate), // Ensure it's a valid Date
             consumed: consumed || false, // Default to false if not provided
             wasteReason: wasteReason || "Not Wasted", // Default reason
@@ -39,7 +39,7 @@ exports.getAllItem = async (req, res) => {
     const userId = req.user.id;
 
     try {
-        const item = await GroceryItem.find({ userId }).sort({ expirationDate: -1 });
+        const item = await GroceryItem.find({ userId }).sort({ expirationDate: 1 });
         res.json(item);
     } catch (error){
         res.status(500).json({ message: "Server Error"});

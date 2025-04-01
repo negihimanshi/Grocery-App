@@ -12,7 +12,7 @@ const GroceryItemSchema = new mongoose.Schema({
     wasteReason: { 
         type: String, 
         enum: ["Expired", "Spoiled", "Unused", "Not Wasted"], 
-        default: function () { return this.consumed ? "Not Wasted" : "Unused"; } // ✅ Dynamic Default 
+        default: function () { return this.consumed ? "Not Wasted" : "Unused"; } 
     }
 });
 

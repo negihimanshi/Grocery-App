@@ -13,6 +13,7 @@ import Meals from "./pages/Dashboard/Meals.jsx";
 import Analytics from "./pages/Dashboard/Analytics.jsx";
 import About from "./pages/Dashboard/About.jsx";
 import UserProvider from './context/UserContext.jsx';
+import { Toaster } from 'react-hot-toast';
 
 
 const App = () => {
@@ -32,6 +33,15 @@ const App = () => {
           </Routes>
         </Router>
       </div>
+
+      <Toaster
+        toastOptions = {{
+          className:"",
+          style: {
+            fontSize: '13px'
+          },
+        }}
+      />
     </UserProvider>
   )
 }

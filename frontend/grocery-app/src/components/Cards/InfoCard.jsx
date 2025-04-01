@@ -2,7 +2,7 @@ import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 
-const InfoCard = ({ icon, label, value, date }) => {
+const InfoCard = ({ icon, label, value, date, onDeleteItem }) => {
   const formattedDate = date
     ? new Date(date).toLocaleDateString("en-US", {
         year: "numeric",
@@ -11,8 +11,8 @@ const InfoCard = ({ icon, label, value, date }) => {
       })
     : "No Expiry";
 
-      const handleDelete = async () => {
-      }
+    //   const handleDelete = async () => {
+    //   }
 
   return (
     <div className="flex lg:flex-row items-center justify-between gap-6 bg-white p-3 rounded-2xl shadow-md border border-gray-200/50 w-full lg:gap-15">
@@ -35,7 +35,7 @@ const InfoCard = ({ icon, label, value, date }) => {
           </p>
         )}
       </div>
-      <button onClick={handleDelete}  className="text-gray-500 text-[30px] mr-5 cursor-pointer">
+      <button onClick={onDeleteItem}  className="text-gray-500 text-[30px] mr-5 cursor-pointer">
             <RiDeleteBin6Line />
         </button>
     </div>
