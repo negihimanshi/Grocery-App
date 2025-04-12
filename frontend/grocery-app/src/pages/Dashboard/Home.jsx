@@ -156,12 +156,12 @@ const Home = () => {
   return (
     <DashboardLayout activeMenu="Dashboard">
       <div className="px-5 md:px-10 lg:px-16 py-6">
-        <div className="grid grid-cols-4">
-        <div className="text-2xl col-span-3 text-gray-800 mr-9 mb-3">Items</div>
-        <button className="flex items-center sm:gap-4 text-1xl sm:text-[15px] text-white bg-primary py-3 px-6 rounded-lg hover:hover:bg-violet-600" onClick={() => setOpenAddItemModal(true)}>
+        <div className="grid grid-cols-4 sm:grid-cols-5">
+        <div className="text-2xl col-span-2 text-gray-800 mr-9 mb-0 mt-3">Items</div>
+        <button className="flex items-center justify-center sm:gap-4 text-1xl sm:text-[15px] text-white py-3 px-6 col-4 sm:col-5 rounded-lg bg-violet-500 shadow-lg shadow-purple-600/5 hover:bg-purple-600/15 hover:text-purple-600" onClick={() => setOpenAddItemModal(true)}>
           <LuPlus /> Add Item</button>
         </div>
-        <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+        <hr className="h-px my-4 mb-6 bg-gray-200 dark:bg-gray-700 border-1"></hr>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
           {loading ? (
             <p>Loading...</p>

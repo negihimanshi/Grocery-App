@@ -15,7 +15,7 @@ const MealCard = ({ icon, label, mealData }) => {
   }
 
   return (
-    <div className="flex flex-col bg-white p-4 rounded-2xl shadow-md border border-gray-200/50 w-full">
+    <div className="flex flex-col col-span-4  bg-white p-4 rounded-2xl shadow-md border border-gray-200/50 w-full">
       {/* Top Section */}
       <div className="flex lg:flex-row items-center justify-between gap-6">
         {/* Icon */}

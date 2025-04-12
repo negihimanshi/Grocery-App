@@ -12,6 +12,7 @@ const UserProvider = ({ children }) => {
 
     // Function to clear user data (e.g. on logoout)
     const clearUser = () => {
+        console.log("Clear user called");
         setUser(null);
     };
 

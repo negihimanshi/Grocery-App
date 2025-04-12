@@ -12,6 +12,7 @@ export const API_PATHS = {
         GET_ALL_ITEMS: "/api/v1/dashboard/get",
         DELETE_ITEM: (itemId) => `/api/v1/dashboard/${itemId}`,
         DOWNLOAD_ITEMS: '/api/v1/dashboard/downloadexcel',
+        // UPLOAD_RECEIPT: '/api/v1/dashboard/upload'
     },
     MEALS: {
         SEARCH_MEALS: "/api/v1/meals/search"

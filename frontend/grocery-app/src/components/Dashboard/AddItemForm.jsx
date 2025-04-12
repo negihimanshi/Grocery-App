@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Input from "../../components/Inputs/Input"
+import { LuPlus } from 'react-icons/lu'
 
 const AddItemForm = ({onAddItem}) => {
     const [item, setItem] = useState({
@@ -76,9 +77,10 @@ const AddItemForm = ({onAddItem}) => {
         <div className='flex justify-end mt-6'>
             <button 
                 type='button'
-                className='bg-purple-400 rounded-2xl text-[15px] border border-gray-600 p-[7px]'
+                className='flex items-center gap-2 sm:gap-4 text-1xl sm:text-[15px] text-white py-3 px-6 rounded-lg bg-violet-500 shadow-lg shadow-purple-600/5 rounded-md hover:bg-purple-600/15 hover:text-purple-600'
                 onClick={()=>onAddItem(item)}
             >
+                <LuPlus />
                 Add Item
             </button>
         </div>

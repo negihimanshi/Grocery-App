@@ -84,7 +84,3 @@ exports.downloadItemExcel = async (req, res) => {
     }
 };
 
-//Logic for expiring items on top
-//Descending order of expiry date
-//Dard red if already expired
-//Red if expiring
